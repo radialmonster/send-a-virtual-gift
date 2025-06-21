@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RadialMonster - Send A Virtual Gift</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #181A1B;
+      color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .container {
+      max-width: 480px;
+      margin: 48px auto 0 auto;
+      padding: 32px 24px 40px 24px;
+      background: rgba(30, 32, 34, 0.95);
+      border-radius: 18px;
+      box-shadow: 0 6px 32px 0 rgba(0,0,0,0.25);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      color: #7df9ff;
+      text-shadow: 0 2px 12px #0ff2, 0 0px 2px #222;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    .message {
+      font-size: 1.08rem;
+      margin-bottom: 2.2rem;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    .gift-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 1.5rem;
+    }
+    .gift-btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 18px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      padding: 18px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.12s, box-shadow 0.12s, background 0.18s;
+      box-shadow: 0 2px 12px 0 rgba(0,0,0,0.13);
+      text-align: left;
+      color: #fff;
+      text-decoration: none;
+      outline: none;
+      min-width: 0;
+    }
+    .gift-btn .emoji {
+      font-size: 2rem;
+      margin-right: 8px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 1px 2px #0008);
+    }
+    .gift-btn.water {
+      background: linear-gradient(90deg, #00c6fb 0%, #005bea 100%);
+    }
+    .gift-btn.water:hover {
+      background: linear-gradient(90deg, #005bea 0%, #00c6fb 100%);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 18px 0 #00c6fb55;
+    }
+    .gift-btn.drink {
+      background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+      color: #222;
+    }
+    .gift-btn.drink:hover {
+      background: linear-gradient(90deg, #ffd200 0%, #f7971e 100%);
+      color: #222;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 18px 0 #ffd20055;
+    }
+    .gift-btn.burger {
+      background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+    }
+    .gift-btn.burger:hover {
+      background: linear-gradient(90deg, #ff5858 0%, #f857a6 100%);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 18px 0 #ff585855;
+    }
+    .gift-btn.pizza {
+      background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+      color: #222;
+    }
+    .gift-btn.pizza:hover {
+      background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+      color: #222;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 18px 0 #43e97b55;
+    }
+    .gift-btn.custom {
+      background: linear-gradient(90deg, #a770ef 0%, #f6d365 100%);
+      color: #222;
+    }
+    .gift-btn.custom:hover {
+      background: linear-gradient(90deg, #f6d365 0%, #a770ef 100%);
+      color: #222;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 18px 0 #a770ef55;
+    }
+    .gift-btn .amount {
+      margin-left: auto;
+      font-size: 1.08rem;
+      font-weight: 500;
+      opacity: 0.92;
+      background: rgba(0,0,0,0.10);
+      padding: 2px 10px;
+      border-radius: 8px;
+    }
+    .footer {
+      margin-top: 2.5rem;
+      font-size: 0.98rem;
+      color: #aaa;
+      opacity: 0.7;
+      letter-spacing: 0.2px;
+    }
+    @media (max-width: 600px) {
+      .container {
+        max-width: 98vw;
+        padding: 14px 2vw 18px 2vw;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.05rem;
+      }
+      .message {
+        font-size: 0.98rem;
+      }
+      .gift-btn {
+        font-size: 0.98rem;
+        padding: 12px 6px;
+        gap: 10px;
+      }
+      .gift-btn .emoji {
+        font-size: 1.2rem;
+      }
+      .footer {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>RadialMonster</h1>
+    <h2>Send A Virtual Gift</h2>
+    <div class="message">
+      If I've helped you, or you found something I did useful, cool, or interesting, you can send a virtual gift below.<br>
+      Gifts are never required, but always appreciated and show your support for what I do!
+    </div>
+    <div class="gift-buttons">
+      <a class="gift-btn water" href="https://buy.stripe.com/5kQ3cw8FI0j6cdCcqH1VK00" target="_blank" rel="noopener">
+        <span class="emoji" aria-label="Water">💧</span>
+        Send Me a Virtual Water
+        <span class="amount">$2</span>
+      </a>
+      <a class="gift-btn drink" href="https://buy.stripe.com/aFa4gA4psaXKgtScqH1VK01" target="_blank" rel="noopener">
+        <span class="emoji" aria-label="Drink">🍹</span>
+        Send Me a Virtual Drink
+        <span class="amount">$5</span>
+      </a>
+      <a class="gift-btn burger" href="https://buy.stripe.com/6oU7sMe024zm1yY9ev1VK02" target="_blank" rel="noopener">
+        <span class="emoji" aria-label="Hamburger">🍔</span>
+        Send Me a Virtual Hamburger
+        <span class="amount">$10</span>
+      </a>
+      <a class="gift-btn pizza" href="https://buy.stripe.com/aFa3cw8FIgi4elKduL1VK03" target="_blank" rel="noopener">
+        <span class="emoji" aria-label="Pizza">🍕</span>
+        Send Me a Virtual Pizza
+        <span class="amount">$20</span>
+      </a>
+      <a class="gift-btn custom" href="https://buy.stripe.com/8x23cw8FIfe0a5uduL1VK04" target="_blank" rel="noopener">
+        <span class="emoji" aria-label="Gift">🎁</span>
+        Choose Your Own Virtual Gift Amount
+      </a>
+    </div>
+    <div class="footer">
+      Powered by Stripe • Thank you for your support!
+    </div>
+  </div>
+</body>
+</html>

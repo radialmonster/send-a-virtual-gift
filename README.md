@@ -1,7 +1,8 @@
 # send-a-virtual-gift
 
-A simple project to send a virtual gift.  
-This project is initialized as a GitHub repository and contains a basic web structure.
+This is a personal donation page for sending virtual gifts to radialmonster.  
+
+All rights reserved.
 
 ## Project Structure
 
@@ -9,9 +10,10 @@ This project is initialized as a GitHub repository and contains a basic web stru
 
 ## Getting Started
 
-1. Clone the repository.
+1. Clone the repository (for personal use only).
 2. Open `src/index.html` in your browser to view the project.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is not open source. All rights reserved.  
+No part of this code may be reused, copied, or modified without explicit permission.
